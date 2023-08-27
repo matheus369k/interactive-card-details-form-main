@@ -97,9 +97,11 @@ main{
     font-size: 9px;
 }
 
-.register{
-    margin: 20px;
+.principal{
+    width: 100vw;
+    padding: 20px;
 }
+
 
 button,
 .big-box{
@@ -153,4 +155,36 @@ input, .box-infor, .button{
 
 .button:hover{
     background-color:  hsl(270, 60%, 24%);
+}
+
+.confirm-off,
+.register-off{
+    display: none;
+}
+
+.confirm-on{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-complete{
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 50px;
+}
+
+.big-mensage{
+    color: hsl(278, 68%, 11%);
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.small-mensage{
+    font-size: 12px;
+    letter-spacing: .5px;
+    color: hsl(279, 6%, 55%);
+    margin-bottom: 25px;
 }
