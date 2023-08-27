@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -15,42 +15,47 @@
 </head>
 <body>
   <main>
-    <section>
-    
-        <div>
-          <span>0000 0000 0000 0000</span>
-          <span>Jane Appleseed</span>
-          <span>00/00</span>
+    <section class="top">
+
+      <div class="cards">
+        <img class="card-back" src="./images/bg-card-back.png" alt="card the back">
+        <div class="infor-card-back">
+            <span>000</span>
         </div>
-    
-        <div>000</div>
+        <img class="card-front" src="./images/bg-card-front.png" alt="card the front">
+        <div class="infor-card-front">
+          <span class="number-card">0000 0000 0000 0000</span>
+          <span class="people-name">Jane Appleseed</span>
+          <span class="date">00/00</span>
+        </div>
+      </div>
         
     </section>
-    <section>
+    <section class="register">
   
         <p>
-          <label for="iname">Cardholder Name</label>
-          <input type="text" name="name" id="iname" placeholder=" e.g. Jane Appleseed">
+          <span class="box-infor">Cardholder Name</span>
+          <input class="big-box" type="text" name="name" id="iname" placeholder=" e.g. Jane Appleseed">
         </p>
        
     
         <p>
-          <label for="card-number">Card Number</label>
-          <input type="number" name="cardNumber" id="icard-number" placeholder="e.g. 1234 5678 9123 0000">
+          <span class="box-infor">Card Number</span>
+          <input class="big-box" type="number" name="cardNumber" id="icard-number" placeholder="e.g. 1234 5678 9123 0000">
         </p>
 
         <p>
-          <label for="idate imonth">Exp. Date (MM/YY)</label>
-          <label for="cvcNumber">CVC</label>
+          <span class="box-infor">Exp. Date (MM/YY)</span>
+          <span class="box-infor box-cvc">CVC</span>
         </p>
     
         <p>
-          <input type="number" name="month" id="imonth" placeholder="MM">
-          <input type="number" name="day" id="iday" placeholder="YY">
-          <input type="number" name="cvcNumber" id="cvcNumber" placeholder="e.g. 123">
+          <input class="small-box" type="number" name="month" id="imonth" placeholder="MM">
+          <input class="small-box" type="number" name="day" id="iday" placeholder="YY">
+          <input class="normal-box" type="number" name="cvcNumber" id="cvcNumber" placeholder="e.g. 123">
         </p>
     
-        <button type="submit">Confirm</button>
+        <button class="button" type="submit">Confirm</button>
     </section>
     <!--<section>
 

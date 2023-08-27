@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: white;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17.4px
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top{
+    width: 100vw;
+    height: 200px;
+    background: url('../images/bg-main-mobile.png') center center no-repeat;
+    background-size: cover;
+    margin-bottom: 55px;
+}
+
+.cards{
+    width: 320px;
+    position: relative;
+    margin: auto;
+}
+
+
+.infor-card-back,
+.card-back{
+    width: 250px;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+
+.infor-card-back span{
+    position: absolute;
+    right: 30px;    
+    top: 60px;
+
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.193);
+    font-size: 10px;
+}
+
+.infor-card-front,
+.card-front{
+    width: 250px;
+    position: absolute;
+    top: 105px;
+    left: 10px;
+}
+
+
+.infor-card-front{
+    color: white;
+
+    text-transform: uppercase ;
+    font-weight: 500;
+
+    margin-top: 50px;
+    padding: 18.6px;
+}
+
+.number-card{
+    display:block;
+    text-align: center;
+    margin-bottom: 10px;
+
+    letter-spacing: 1px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.289);
+}
+
+.date{
+    display: block;
+    text-align: right;
+    margin-top: -14px;
+}
+
+.date,
+.people-name{
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.168);
+    font-size: 9px;
+}
+
+.register{
+    margin: 20px;
+}
+
+button,
+.big-box{
+    width: 100%;
+}
+
+.normal-box{
+    width: 45%;
+}
+
+.small-box{
+    width: 20%;
+    margin-right: 5%;
+}
+
+input,
+.button{
+    height: 45px;
+    border-radius: 7px;
+    border: 1px solid  hsl(270, 3%, 87%);
+}
+
+.box-infor{
+    text-transform: uppercase;
+    font-size: 11.5px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: hsl(278, 68%, 11%);
+}
+
+.box-cvc{
+    padding-left: 8%;
+}
+
+.button{
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+input{
+    padding-left: 15px;
+}
+
+input, .box-infor, .button{
+    margin: 8px 0px 16px;
+}
+
+.button:hover{
+    background-color:  hsl(270, 60%, 24%);
+}
