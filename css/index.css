@@ -17,25 +17,60 @@ body{
     font-size: 17.4px
 }
 
+@media screen and (min-width:1024px) {
+    html,body{
+        width: auto;
+    }
+}
+
 main{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+@media screen and (min-width: 1024px) {
+    main{
+        flex-direction: row;
+    }
+}
+
 .top{
-    width: 100vw;
+    width: 100%;
     height: 200px;
-    background: url('../images/bg-main-mobile.png') center center no-repeat;
+    background: url('../images/bg-main-mobile.png') top center no-repeat;
     background-size: cover;
     margin-bottom: 55px;
+    margin-top: -5px;
+}
+
+@media screen and (min-width:1024px) {
+    .top{
+        height: 100vh;
+        width: 30vw;
+        background: url('../images/bg-main-desktop.png') no-repeat;
+        margin-left: -10vw;
+        margin-bottom: -5px;
+    }
 }
 
 .cards{
     width: 320px;
     position: relative;
     margin: auto;
+}
+
+@media screen and (min-width:1024px) {
+    .cards{
+        width: 400px;
+        position: absolute;
+        top: 30%;
+        height: auto;
+        left: 9vw;
+
+    }
 }
 
 
@@ -45,6 +80,15 @@ main{
     position: absolute;
     right: 10px;
     top: 30px;
+}
+
+@media screen and (min-width:1024px){
+    .infor-card-back,
+    .card-back{
+        width: 300px;
+        top: 150px;
+        left: 11vw;
+    }
 }
 
 .infor-card-back span{
@@ -57,12 +101,50 @@ main{
     font-size: 10px;
 }
 
+@media screen and (min-width:1024px) {
+    .infor-card-back span{
+        top: 74px;
+        right: 40px;
+    }
+}
+
+.logo-card{
+    position: absolute;
+    top: 105px;
+    left: 10px;
+    z-index: 1;
+
+    margin: 15px;
+    width: 50px;
+}
+
+@media screen and (min-width:1024px) {
+    .logo-card{
+        left: 20%;
+        top: -40px;
+
+        margin: 20px;
+        width: 50px;
+    }
+}
+
 .infor-card-front,
 .card-front{
     width: 250px;
     position: absolute;
     top: 105px;
     left: 10px;
+}
+
+@media screen and (min-width:1024px) {
+    .infor-card-front,
+    .card-front{
+        width: 300px;
+        left: 5.5vw;
+        top: -40px;
+
+        font-size: 21px;
+    }
 }
 
 
@@ -85,6 +167,12 @@ main{
     text-shadow: 1px 1px rgba(0, 0, 0, 0.289);
 }
 
+@media screen and (min-width:1024px) {
+    .number-card{
+        margin-top: 10px;
+    }
+}
+
 .date{
     display: block;
     text-align: right;
@@ -97,9 +185,38 @@ main{
     font-size: 9px;
 }
 
+@media screen and (min-width: 1024px) {
+    .date{
+        margin-top: -18px;
+    }
+
+    .date,
+    .people-name{
+        font-size: 12px;
+
+        margin-left:6px;
+        margin-right: 6px;
+    }
+}
+
 .principal{
-    width: 100vw;
     padding: 20px;
+}
+
+@media screen and (min-width:1024px) {
+    .principal{
+        width: 40vw;
+        margin-left: 20vw;
+        padding: 0px;
+    }
+
+    .register-on,
+    .confirm-on{
+
+        width: 40vw;
+        position: relative;
+        
+    }
 }
 
 
