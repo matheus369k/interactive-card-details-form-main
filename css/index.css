@@ -227,12 +227,11 @@ main{
 }
 
 .normal-box{
-    width: 45%;
+    width: 100%;
 }
 
 .small-box{
-    width: 20%;
-    margin-right: 6.3%;
+    width: 49%;
 }
 
 input,
@@ -248,10 +247,29 @@ input,
     letter-spacing: 2px;
     font-weight: 600;
     color: hsl(278, 68%, 11%);
+    margin-left: 4px;
+}
+
+.cvc-boc,
+.month-box{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 5%;
+}
+
+.dado-cvc{
+    display: flex;
+    flex-direction: row;
+    margin-top: -30px;
 }
 
 .box-cvc{
-    padding-left: 30%;
+    padding-left: 18%;
+}
+
+.paragraf{
+    margin-bottom: 30px;
 }
 
 .button{
@@ -261,14 +279,21 @@ input,
     font-weight: 600;
 
     cursor: pointer;
+    margin-top: 30px;
 }
 
 input{
     padding-left: 15px;
 }
 
-input, .box-infor, .button{
-    margin: 8px 0px 16px;
+.msg{
+    color: red;
+    font-size: calc(10px + .3vw);
+    display: block;
+}
+
+input, .box-infor{
+    margin: 8px 0px -2x;
 }
 
 .button:hover{
