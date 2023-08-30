@@ -287,7 +287,7 @@ input{
 }
 
 .msg{
-    color: red;
+    color: rgb(255, 0, 0);
     font-size: calc(10px + .3vw);
     display: block;
 }
