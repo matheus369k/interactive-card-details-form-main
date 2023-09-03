@@ -38,11 +38,11 @@ body{
 
 @media screen and (min-width:1024px) {
     .top{
-        height:651px;
+        height:705px;
         max-width: calc(250px + 10vh + 5vw);
         background: url('../images/bg-main-desktop.png')left center;
         background-size: cover;
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 }
 
