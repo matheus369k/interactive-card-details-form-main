@@ -1,105 +1,63 @@
-# Frontend Mentor - Interactive card details form
+# 💻Interactive card details form
+<div align='center'>
+  
+![Sem título](https://github.com/matheus369k/interactive-card-details-form-main/assets/47065962/14187ce2-a557-4196-8f9e-ea163f99d8c6)</div>
 
-![Design preview for the Interactive card details form coding challenge](./design/desktop-preview.jpg)
+__Nota__: *__Bem-vindo ao Formulário interativo de detalhes do cartão__. Esse projeto foi desenvolvido com foco no aprimoramento de abilidasdes HTML, CSS e JavaScript, sendo proposto no site [Frontend Mentor](https://www.frontendmentor.io).* 
 
-## Welcome! 👋
+## 🚀Começando
+- [Linguagens utilizadas](#linguagens-utilizadas)
+- [Codigo](#codigo)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [JavaScript](#javascript)
+- [Licença](#licença)
+- [Autores](#autores)
 
-Thanks for checking out this front-end coding challenge.
+## 📋Linguagens utilizadas
+- HTML
+- CSS
+- JavaScript
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## 🧰codigo
+Na criação do projeto foi utilizado varias linguagens para deixar o projeto com esse resultado final.
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+### __HTML__
+A entrada de informação foi utilizado a classica tag ```<input type="text">```, sendo ela a responsavel por coletar os dados do usuario....
+<div align="center">
+  
+![peek](https://github.com/matheus369k/interactive-card-details-form-main/assets/47065962/3359d40a-6d5c-48dc-a9b7-5f7d5efe2683)</div>
+na entrada do numero do cartão, data e cvc poderia ser utilizada inputs especificos com foco nos dados a serem inseridos, contudo foi utilizados o input com foco no texto, por dar espaço a entrada de diferentes tipos de dados e ajudar a treinar as habilidades logicas de verificação de dados ou seja, aumentar o desafio🤓. 
 
-## The challenge
+### __CSS__
+O estilo do projeto teve media query para celulares com o desenvolvimento inicial e para telas acima de 1024px, contudo foi aderido comandos para não quebrar ou deixa-lo visualmente "estranho", mesmo assim todo projeto sempre esta espostos a falhas, então peço sua compreenção.
+<div align="center">
+  
+![peek1](https://github.com/matheus369k/interactive-card-details-form-main/assets/47065962/c029da71-25e2-43cd-a08b-2a8978b68546)</div>
+Relacionado a forma de posicionamento dos itens foi utilizado ```display:flex;``` e ```position: absolute;```
+<div align="center">
+  
+![Sem título](https://github.com/matheus369k/interactive-card-details-form-main/assets/47065962/d4c3d368-3819-4366-8d34-61d56a785056)</div>
+### __JavaScript__
+Foram criadas 3 funções js para fazer a verificação dos dados e adenção dos dados nos cartões, que estão acima no site.
 
-Your challenge is to build out this interactive card details form and get it looking as close to the design as possible.
+```buttonClick()``` Essa função tem como missão a analize se os dados estão de acordo com o aque se pede para comfirmar a "validação" dos dados.
+<div align="center"
+  
+![Capturar](https://github.com/matheus369k/interactive-card-details-form-main/assets/47065962/0690bfb2-1b2a-45ff-81cd-90ec1893b931)</div>
+```Verification()``` Essa função tem como objetivo a verificação dos dados inseridos, para ver se os dados são validos ou não.
+<div align="center">
+  
+![Capturar](https://github.com/matheus369k/interactive-card-details-form-main/assets/47065962/7a7b2d1c-6c00-4686-b584-bf2119c36ca0)</div>
+```addInforCards()``` Essa função tem como foco a adição dos dados depois de serem digitados e terem passado pela leve verificação.
+<div align="center">
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+![Capturar](https://github.com/matheus369k/interactive-card-details-form-main/assets/47065962/d0a4689c-3ea7-40a0-b96d-c43a00685991)</div>
 
-Your users should be able to: 
+## 📃Licença
+Não foi atribuida uma licença.
 
-- Fill in the form and see the card details update in real-time
-- Receive error messages when the form is submitted if:
-  - Any input field is empty
-  - The card number, expiry date, or CVC fields are in the wrong format
-- View the optimal layout depending on their device's screen size
-- See hover, active, and focus states for interactive elements on the page
+## 🖋Autores
+__Desenvolvedor__ - [Matheus369k](https://github.com/matheus369k)
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
-
-### Expected behaviour
-
-- Update the details on the card as the user fills in the fields
-- Validate the form fields when the form is submitted
-- If there are no errors, display the completed state
-- Reset the form when the user clicks "Continue" on the completed state
-
-**⚠️ IMPORTANT ⚠️: When you create the live version of your project, we recommmend giving it a random name for the URL. This is because with it being a fake credit card form, some browsers will open a warning notice before people can access your project. So it's best to name the project something unrelated to credit cards so that browsers don't show the warning to people viewing your project.**
-
-## Where to find everything
-
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
-
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
-
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
-
-You will find all the required assets in the `/images` folder. The assets are already optimized.
-
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
-
-## Building your project
-
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
-
-## Deploying your project
-
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+__Design__ - [Frontend Mentor](https://www.frontendmentor.io)
