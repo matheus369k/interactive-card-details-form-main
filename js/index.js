@@ -6,7 +6,17 @@ function comfirmationCard(e) {
 
     e.preventDefault()
 
-    VerificationForm()
+    const divEffect = document.createElement("div")
+    divEffect.setAttribute("class", "container_divEffect_verification_dados")
+    const fotherDivEffect = document.getElementById("form_container")
+    fotherDivEffect.appendChild(divEffect)
+    
+
+    setTimeout(()=> {
+        fotherDivEffect.removeChild(document.querySelector(".container_divEffect_verification_dados"))
+
+        VerificationForm()
+    }, 1000)
 
     return
 }
@@ -99,30 +109,11 @@ const inputValues = document.querySelectorAll("input")
 
 function VerificationForm() {
 
-
-    for (let i = 0; i < inputValues.length; i++) {
-
-        verificationTypeValue(inputValues[i], i)
-
-        if (inputValues[i].value.length < 1) {
-
-            if (document.getElementById(`input_${i}`)) {
-
-                inputValues[i].parentNode.removeChild(document.getElementById(`input_${i}`))
-
-            }
-
-            ErroList[i] = "Can't be blank"
-
-        }
-
-        ErrMsg(i)
-    }
+    verificationValueRecomend()
 
     if (document.getElementById("form_container").childNodes.length < 22) {
         return CreaterContainerConfirmation()
     }
-
 
     return
 }
@@ -143,81 +134,29 @@ inputValues.forEach((inputValue, index) => {
 
     inputValue.addEventListener("input", () => {
 
-        verificationTypeValue(inputValue, index)
+        AddValueCard(inputValue, index)
 
         return
     })
 })
 
-function verificationTypeValue(inputValue, index) {
+function AddValueCard(inputValue, index) {
 
-    if (inputValue === inputValues[0] && inputValues[0].value.match(/^[a-zA-ZÃ\s]+$/) !== null && inputValues[0].value.length > 3) {
-
-        cardRegister["name"] = inputValues[0].value
-
-
-        document.getElementById("name").innerHTML = `${cardRegister["name"]}`
-
-        ErroList[0] = "Corrected"
-
-        ErrMsg(0)
-
-
-        return
-    }
-    else if (inputValue.value.match(/^[0-9]+$/) !== null && inputValue.value > 0) {
-
-        verificationValueRecomend(inputValue, index)
-
-        return
-
-    }
-    else {
-
-        if (document.getElementById(`input_${index}`)) {
-
-            inputValues[index].parentNode.removeChild(document.getElementById(`input_${index}`))
-
-        }
-
-        ErroList[index] = "Wrong format, numbers only"
-
-        ErrMsg(index)
-
-
-        return
-    }
-}
-
-function verificationValueRecomend(inputValue, index) {
-
-    if (inputValue === inputValues[3] && inputValues[3].value.length === 2 && (inputValues[3].value <= daysofMonth[Number(inputValues[2].value) - 1] &&  inputValues[2].value >= 1 ||  inputValues[2].value < 1 && inputValues[3].value <= 31 )) {
+    if (inputValue === inputValues[3]) {
 
         cardRegister["day"] = inputValues[3].value
 
         document.getElementById("day").innerHTML = `${cardRegister["day"]}`
 
-        ErroList[3] = "Corrected"
-
     }
-    else if (inputValue === inputValues[2] && inputValues[2].value < 13 && inputValues[2].value.length === 2) {
+    else if (inputValue === inputValues[2]) {
 
         cardRegister["month"] = inputValues[2].value
 
         document.getElementById("month").innerHTML = `${cardRegister["month"]}`
 
-        ErroList[2] = "Corrected"
-
-        if (inputValues[3].value > daysofMonth[Number(inputValues[2].value) - 1]) {
-            
-            ErroList[3] = "Wrong format, numbers only"
-
-            ErrMsg(3)
-            
-        }
-
     }
-    else if (inputValue === inputValues[1] && inputValues[1].value.length === 16) {
+    else if (inputValue === inputValues[1]) {
 
         cardRegister["cardnumber"] = inputValues[1].value
 
@@ -235,39 +174,113 @@ function verificationValueRecomend(inputValue, index) {
             }
         }
 
-        ErroList[1] = "Corrected"
-
     }
-    else if (inputValue === inputValues[4] && inputValues[4].value.length === 3) {
+    else if (inputValue === inputValues[4]) {
 
         cardRegister["cvc"] = inputValues[4].value
 
         document.getElementById("cvc").innerHTML = `${cardRegister["cvc"]}`
 
-        ErroList[4] = "Corrected"
+    }
+
+    if (inputValue === inputValues[0]) {
+
+        cardRegister["name"] = inputValues[0].value
+
+        document.getElementById("name").innerHTML = `${cardRegister["name"]}`
+
+    }
+}
+
+function verificationValueRecomend() {
+
+    if (inputValues[0].value.length > 3) {
+
+        ErroList[0] = "Corrected"
+    } else {
+
+        ErroList[0] = "Wrong format, numbers only"
+    }
+
+    if (inputValues[3].value.length === 2 && (inputValues[3].value <= daysofMonth[Number(inputValues[2].value) - 1] && inputValues[2].value >= 1 || inputValues[2].value < 1 && inputValues[3].value <= 31)) {
+
+        ErroList[3] = "Corrected"
 
     }
     else {
 
-        ErroList[index] = "Wrong format, numbers only"
-
+        ErroList[3] = "Wrong format, numbers only"
     }
 
-    if (document.getElementById(`input_${index}`)) {
+    if (inputValues[2].value < 13 && inputValues[2].value.length === 2) {
 
-        inputValues[index].parentNode.removeChild(document.getElementById(`input_${index}`))
+        ErroList[2] = "Corrected"
+
+        if (inputValues[3].value > daysofMonth[Number(inputValues[2].value) - 1]) {
+
+            ErroList[3] = "Wrong format, numbers only"
+
+        }
 
     }
+    else {
 
-    ErrMsg(index)
+        ErroList[2] = "Wrong format, numbers only"
+    }
 
+    if (inputValues[1].value.length === 16) {
+
+        ErroList[1] = "Corrected"
+
+    }
+    else {
+
+        ErroList[1] = "Wrong format, numbers only"
+    }
+
+    if (inputValues[4].value.length === 3) {
+
+        ErroList[4] = "Corrected"
+    }
+    else {
+
+        ErroList[4] = "Wrong format, numbers only"
+    }
+
+
+    for (let i = 0; i < inputValues.length; i++) {
+
+
+        if (inputValues[i].value.length === 0) {
+
+            ErroList[i] = "Can't be blank"
+
+        } else if (inputValues[i].value.match(/^[a-zA-ZÃ\s]+$/) === null && inputValues[i] === inputValues[0]) {
+
+            ErroList[i] = "Wrong format, numbers only"
+            
+        } else if (inputValues[i].value.match(/^[0-9]+$/) === null && inputValues[i] !== inputValues[0]) {
+
+            ErroList[i] = "Wrong format, numbers only"
+
+        }
+
+        if (document.getElementById(`input_${i}`)) {
+
+            inputValues[i].style.border = "1px solid #dedede"
+
+            inputValues[i].parentNode.removeChild(document.getElementById(`input_${i}`))
+        }
+        ErrMsg(i)
+
+    }
 
     return
 }
 
 function ErrMsg(i) {
 
-    if (document.getElementById(`input_${i}`) === null) {
+    if (document.getElementById(`input_${i}`) === null && ErroList[i] !== "Corrected") {
 
         const Errormsg = document.createElement("span")
 
@@ -285,12 +298,11 @@ function ErrMsg(i) {
         inputValues[i].style.border = "1px solid red"
 
     }
+    else if (document.getElementById(`input_${i}`) && ErroList[i] === "Corrected") {
 
-    if (document.getElementById(`input_${i}`) && ErroList[i] === "Corrected") {
+        inputValues[i].style.border = "1px solid #dedede"
 
         inputValues[i].parentNode.removeChild(document.getElementById(`input_${i}`))
-
-        inputValues[i].style.border = "1px solid hsl(270, 3%, 87%)"
 
     }
 
