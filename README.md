@@ -12,7 +12,7 @@ A organição do projeto tem como responsavel o layout grid, O projeto  foi dese
 <div align"center">
   
 ![cardresponsive](https://github.com/matheus369k/interactive-card-details-form-main/assets/47065962/397badc1-2ee9-4604-8a9a-7a6e2ce2f1d8)</div>
-A forma de verificação utilizado foi utilizando if e else para dependendo do dado inserido ele acaba desencadeando um erro e bloqueando a passagem para a proxima etapa para o cliente. Na criação da aba de confimação e de load fora utilizado createElement() para cria-las.
+A forma de verificação utilizado foi if e else para dependendo do dado inserido ele acaba desencadeando um erro e bloqueando a passagem para a proxima etapa para o cliente. Na criação da aba de confimação e de load fora utilizado createElement() para cria-las.
 
 ## 📃Licença
 Não foi Aderiada uma Licença.
