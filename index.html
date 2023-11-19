@@ -2,76 +2,84 @@
 
 <html lang="pt-br">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-    <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/index.css">
 
-    <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/responsive.css">
 
-    <title> Frontend Mentor | Interactive card details form </title>
+  <title> Frontend Mentor | Interactive card details form </title>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <section class="cards_container">
+  <section class="cards_container">
 
-      <div class="container_cards container_card_back">
+    <div class="container_cards container_card_back">
 
-        <img class="container_cards_img" src="./images/bg-card-back.png" alt="card the back">
+      <img class="container_cards_img" src="./images/bg-card-back.png" alt="card the back">
 
-        <span id="cvc" class="cards_container_infor card_container_infor_cvc">000</span>
+      <span id="cvc" class="cards_container_infor card_container_infor_cvc">000</span>
 
-      </div>
+    </div>
 
-      <div  class="container_cards container_card_front">
+    <div class="container_cards container_card_front">
 
-        <img class="container_cards_img" src="./images/bg-card-front.png" alt="card the front">
+      <img class="container_cards_img" src="./images/bg-card-front.png" alt="card the front">
 
-        <img class="card_container_logo" src="./images/card-logo.svg" alt="card logo">
+      <img class="card_container_logo" src="./images/card-logo.svg" alt="card logo">
 
-        <span id="cardNumber" class="cards_container_infor card_container_infor_number">0000 0000 0000 0000</span>
+      <span id="cardNumber" class="cards_container_infor card_container_infor_number">0000 0000 0000 0000</span>
 
-        <span id="name" class="cards_container_infor card_container_infor_name">Jane Appleseed</span>
+      <span id="name" class="cards_container_infor card_container_infor_name">Jane Appleseed</span>
 
-        <span class="cards_container_infor card_container_infor_data"><span id="month">00</span>/<span id="day">00</span></span>
+      <span class="cards_container_infor card_container_infor_data">
+        <span id="month">00</span>/<span
+          id="day">00</span>
+      </span>
 
-      </div>
+    </div>
 
-    </section>
+  </section>
 
-    <form id="form_container" class="container_cadrastro_card">
+  <form id="form_container" class="container_cadrastro_card">
 
-      <label class="container_cadrastro_card_label name">Cardholder Name</label>
+    <label class="container_cadrastro_card_label name">Cardholder Name</label>
 
-      <input autocomplete="off" maxlength="26" class="container_cadrastro_card_input name" type="text" name="name" id="iname" placeholder=" e.g. Jane Appleseed">
+    <input autocomplete="off" maxlength="26" class="container_cadrastro_card_input name" type="text" name="name"
+      id="iname" placeholder=" e.g. Jane Appleseed">
 
-      <label class="container_cadrastro_card_label number">Card Number</label>
+    <label class="container_cadrastro_card_label number">Card Number</label>
 
-      <input maxlength="16" autocomplete="off" class="container_cadrastro_card_input number" type="text" name="cardNumber" id="icard-number" placeholder="e.g. 1234 5678 9123 0000">
+    <input maxlength="16" autocomplete="off" class="container_cadrastro_card_input number" type="text" name="cardNumber"
+      id="icard-number" placeholder="e.g. 1234 5678 9123 0000">
 
-      <label class="container_cadrastro_card_label date">Exp. Date (MM/YY)</label>
+    <label class="container_cadrastro_card_label date">Exp. Date (MM/YY)</label>
 
-      <label class="container_cadrastro_card_label cvc">CVC</label>
+    <label class="container_cadrastro_card_label cvc">CVC</label>
 
-      <input maxlength="2" autocomplete="off" class="container_cadrastro_card_input date" type="text" name="month" id="imonth" placeholder="MM">
+    <input maxlength="2" autocomplete="off" class="container_cadrastro_card_input date" type="text" name="month"
+      id="imonth" placeholder="MM">
 
-      <input maxlength="2" autocomplete="off" class="container_cadrastro_card_input date" type="text" name="day" id="iday" placeholder="YY">
+    <input maxlength="2" autocomplete="off" class="container_cadrastro_card_input date" type="text" name="day" id="iday"
+      placeholder="YY">
 
-      <input maxlength="3" autocomplete="off" class="container_cadrastro_card_input cvc" type="text" name="cvcNumber" id="cvcNumber" placeholder="e.g. 123">
+    <input maxlength="3" autocomplete="off" class="container_cadrastro_card_input cvc" type="text" name="cvcNumber"
+      id="cvcNumber" placeholder="e.g. 123">
 
-      <button id="btnConfirmation" class="container_cadrastro_card_btn">Confirm</button>
+    <button id="btnConfirmation" class="container_cadrastro_card_btn">Confirm</button>
 
-    </form>
+  </form>
 
-      <script src="./js/index.js"></script>
+  <script src="./js/index.js"></script>
 
-  </body>
+</body>
 
 </html>

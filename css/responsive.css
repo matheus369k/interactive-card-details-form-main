@@ -1,10 +1,4 @@
 @media (max-width: 1024px) {
-
-    html,
-    body {
-        grid-template-columns: 30vw 20vw 40vw 10vw;
-    }
-
     .container_card_back {
         left: 12vw;
     }
@@ -46,25 +40,25 @@
 
 @media (max-width: 893px) {
     .container_card_back {
-        left: 6vw;
+        left: 8vw;
     }
 
     .container_card_front {
-        left: 0vw;
+        left: 2vw;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) or (min-height: 1024px) {
 
     html,
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 40vh 1fr;
     }
 
     .cards_container {
         background: url(../images/bg-main-mobile.png) top center no-repeat;
-        background-size: 100vw 250px;
+        background-size: 100vw 80%;
 
         grid-row: 1;
         grid-column: 1;
@@ -73,6 +67,10 @@
         grid-template-rows: min-content;
 
         box-shadow: none;
+    }
+
+    .container_cards {
+        grid-template-columns: 70% 30%;
     }
 
     .container_cards_img {
@@ -87,7 +85,7 @@
     }
 
     .container_card_back {
-        top: 20px;
+        top: calc(40vh - 340px);
         left: 55vw;
         transform: translateX(-50%);
 
@@ -95,7 +93,7 @@
     }
 
     .container_card_front {
-        top: 130px;
+        top: calc(40vh - 220px);
         left: 45vw;
         transform: translateX(-50%);
 
@@ -103,7 +101,7 @@
     }
 
     .card_container_infor_number {
-        letter-spacing: 4px;
+        letter-spacing: 3px;
     }
 
     .container_cadrastro_card {
@@ -117,7 +115,6 @@
         row-gap: 10px;
 
         position: relative;
-        top: 8vh;
         left: 5vw;
     }
 
@@ -125,23 +122,26 @@
         margin-left: 0px;
     }
 
-    .Container_ErrorMsg_0 {    
+    .Container_ErrorMsg_0 {
         width: 90vw;
     }
-    .Container_ErrorMsg_1 {    
+
+    .Container_ErrorMsg_1 {
         width: 90vw;
     }
+
     .Container_ErrorMsg_3,
     .Container_ErrorMsg_2 {
         width: 50vw;
     }
+
     .Container_ErrorMsg_4 {
         width: 50vw;
     }
 
-    .container_cadrastro_card_input {    
+    .container_cadrastro_card_input {
         width: 90vw;
-        height: 50px;
+        height: 60px;
     }
 
     .container_cadrastro_card_input.date {
@@ -156,15 +156,12 @@
 
     .container_cadrastro_card_btn {
         width: 90vw;
-        height: 50px;
+        height: 60px;
     }
 
     .container_confirmation {
         grid-column: 1;
         grid-row: 2;
-
-        position: relative;
-        top: 8vh;
     }
 
     .container_Confirmation_btn {
@@ -173,13 +170,49 @@
         position: relative;
         left: 5vw;
     }
-    
+
     .container_divEffect_verification_dados {
         width: 100vw;
         height: 100%;
 
         left: -5vw;
     }
+}
+
+@media (max-height: 800px) and (max-width: 768px) {
+
+    html,
+    body {
+        grid-template-rows: 50vh 1fr;
+    }
+
+    .container_card_back {
+        top: calc(50vh - 340px);
+    }
+
+    .container_card_front {
+        top: calc(50vh - 220px);
+    }
+
+}
+
+@media (max-width: 568px) {
+
+    .container_card_back {
+        top: 20px;
+        left: 55vw;
+        transform: translateX(-50%);
+
+        grid-row: 1;
+    }
+
+    .container_card_front {
+        top: 130px;
+        left: 45vw;
+        transform: translateX(-50%);
+
+    }
+
 }
 
 @media (max-width: 393px) {
